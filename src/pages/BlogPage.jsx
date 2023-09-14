@@ -22,8 +22,11 @@ export function loader({params}) {
 function BlogPage() {
   const post = useLoaderData()
   return (
-    <article className="Article">
+    <article className='Article'>
       <h1>{post.title}</h1>
+      {post.mainImage && post.mainImage.asset &&
+        <img src={post.mainImage.asset.url} alt={post.title} />
+      }
       <PortableText value={post.body} />
     </article>
   )

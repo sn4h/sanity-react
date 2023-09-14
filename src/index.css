@@ -50,3 +50,8 @@ h1 {
     max-width: 40rem;
     margin: 0 auto;
 }
+
+.Article img {
+    max-width: 100%;
+    height: auto;
+}
