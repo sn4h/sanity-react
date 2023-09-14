@@ -3,7 +3,7 @@
 //const apiKey = process.env.OPENAI_API_KEY
 import {OpenAIApi, Configuration} from "openai"
 
-const apiKey = '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'
+const apiKey = '...'
 const url = 'https://api.openai.com/v1/completions'
 const config = new Configuration({apiKey})
 const openai = new OpenAIApi(config)
