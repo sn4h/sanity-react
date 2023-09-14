@@ -1,5 +1,3 @@
-// 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
-
 //const apiKey = process.env.OPENAI_API_KEY
 import {OpenAIApi, Configuration} from "openai"
 
