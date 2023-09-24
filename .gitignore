@@ -23,7 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 .sanity
-client.js
 /.pnp
 .pnp.js
 env

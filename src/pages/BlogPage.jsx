@@ -1,6 +1,7 @@
 import client from '../client.js'
 import {useLoaderData} from 'react-router-dom'
 import {PortableText} from '@portabletext/react'
+import imageUrlBuilder from '../imageUrlBuilder.js'
 
 export function loader({params}) {
   return client.fetch(
@@ -39,21 +40,27 @@ export function loader({params}) {
 function BlogPage() {
   const post = useLoaderData()
 
+  function urlFor(source) {
+    return imageUrlBuilder.image(source)
+  }
+
   return (
     <article className='Article'>
       {post.mainImage && post.mainImage.asset &&
         <figure className='MainImage--Item'>
-          <img src={post.mainImage.asset.url} alt={post.title} />
+          <img
+            src={urlFor(post.mainImage).width(640)}
+            alt={post.title}
+          />
         </figure>
       }
       <h1>{post.title}</h1>
       <PortableText value={post.body} />
       <div className='Gallery'>
         {post.gallery.images && post.gallery.images.map(image => (
-          <figure className='Gallery--Item'>
+          <figure key={image.asset._id} className='Gallery--Item'>
             <img
-              key={image.asset._id}
-              src={image.asset.url}
+              src={urlFor(image).width(640)}
               alt={image.alt}
             />
             <figcaption>
