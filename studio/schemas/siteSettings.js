@@ -14,6 +14,14 @@ export default defineType({
       name: 'description',
       title: 'Site Description',
       type: 'text'
+    }),
+    defineField({
+      title: 'Opening Hours',
+      name: 'openingHours',
+      type: 'array',
+      of: [{
+        type: 'dayAndTime'
+      }]
     })
   ]
 })
