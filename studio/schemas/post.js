@@ -40,6 +40,16 @@ export default defineType({
       ]
     }),
     defineField({
+      name: 'body',
+      title: 'Body',
+      type: 'blockContent'
+    }),
+    defineField({
+      name: 'gallery',
+      title: 'Gallery',
+      type: 'gallery'
+    }),
+    defineField({
       name: 'categories',
       title: 'Categories',
       type: 'array',
@@ -49,14 +59,8 @@ export default defineType({
       name: 'publishedAt',
       title: 'Published at',
       type: 'datetime'
-    }),
-    defineField({
-      name: 'body',
-      title: 'Body',
-      type: 'blockContent'
     })
   ],
-
   preview: {
     select: {
       title: 'title',
