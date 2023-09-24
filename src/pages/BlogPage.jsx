@@ -58,7 +58,7 @@ function BlogPage() {
       <PortableText value={post.body} />
       <div className='Gallery'>
         {post.gallery.images && post.gallery.images.map(image => (
-          <figure key={image.asset._id} className='Gallery--Item'>
+          <figure key={image.asset._id} className='Gallery__Item'>
             <img
               src={urlFor(image).width(640)}
               alt={image.alt}
@@ -73,7 +73,7 @@ function BlogPage() {
         <p><small>Written by {post.author.name}</small></p>
       }
       {post.categories && post.categories.map(category => (
-        <span key={category._id} className='Category--Item'>
+        <span key={category._id} className='Category__Tag'>
           <small>{category.title}</small>
         </span>
       ))}

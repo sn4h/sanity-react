@@ -65,11 +65,11 @@ figure {
     height: auto;
 }
 
-.Gallery--Item {
+.Gallery__Item {
     margin-bottom: 1rem;
 }
 
-.Category--Item {
+.Category__Tag {
     color: #242424;
     background-color: #ffffff;
     border-radius: 1rem;
