@@ -41,29 +41,35 @@ function BlogPage() {
 
   return (
     <article className='Article'>
-      <h1>{post.title}</h1>
-      {post.author && <p><small>Written by {post.author.name}</small></p>}
       {post.mainImage && post.mainImage.asset &&
-        <img src={post.mainImage.asset.url} alt={post.title} />
+        <figure className='MainImage--Item'>
+          <img src={post.mainImage.asset.url} alt={post.title} />
+        </figure>
       }
+      <h1>{post.title}</h1>
       <PortableText value={post.body} />
-      <figure className='Gallery'>
+      <div className='Gallery'>
         {post.gallery.images && post.gallery.images.map(image => (
-          <>
+          <figure className='Gallery--Item'>
             <img
               key={image.asset._id}
               src={image.asset.url}
               alt={image.alt}
             />
-            <p>{image.description}</p>
-          </>
+            <figcaption>
+              <small>{image.description}</small>
+            </figcaption>
+          </figure>
         ))}
-      </figure>
-      <p>
-        {post.categories && post.categories.map(category => (
-          <small key={category._id}>{category.title}</small>
-        ))}
-      </p>
+      </div>
+      {post.author &&
+        <p><small>Written by {post.author.name}</small></p>
+      }
+      {post.categories && post.categories.map(category => (
+        <span key={category._id} className='Category--Item'>
+          <small>{category.title}</small>
+        </span>
+      ))}
     </article>
   )
 }

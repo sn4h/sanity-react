@@ -56,7 +56,22 @@ figure {
     margin: 0 auto;
 }
 
+.Article {
+    padding: 1rem 0;
+}
+
 .Article img {
     max-width: 100%;
     height: auto;
+}
+
+.Gallery--Item {
+    margin-bottom: 1rem;
+}
+
+.Category--Item {
+    color: #242424;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 0.1rem 0.5rem 0.25rem;
 }
