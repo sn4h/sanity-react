@@ -64,7 +64,9 @@ function BlogPage() {
               alt={image.alt}
             />
             <figcaption>
-              <small>{image.description}</small>
+              <small>
+                <PortableText value={image.description} />
+              </small>
             </figcaption>
           </figure>
         ))}
