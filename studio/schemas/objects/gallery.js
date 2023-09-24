@@ -23,7 +23,7 @@ export default {
             },
             {
               name: 'description',
-              type: 'text',
+              type: 'blockContent',
               title: 'Description',
             }
           ],
