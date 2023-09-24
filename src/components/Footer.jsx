@@ -21,7 +21,7 @@ function Footer() {
         –
         <p>
           <strong itemProp='name'>{settings.title}</strong><br />
-          <span itemProp='address' itemScope='' itemType='http://schema.org/PostalAddress'>
+          <span itemProp='address' itemScope itemType='http://schema.org/PostalAddress'>
             <span itemProp='streetAddress'>{settings.address.address}</span><br />
             <span itemProp='postalCode'>{settings.address.zipCode}</span>&nbsp;
             <span itemProp='addressLocality'>{settings.address.city}</span>
